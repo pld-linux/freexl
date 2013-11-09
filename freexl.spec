@@ -5,12 +5,12 @@
 Summary:	Simple library for extracting the contents of Microsoft Excel files
 Summary(pl.UTF-8):	Prosta biblioteka do wyciągania danych z plików Microsoft Excela
 Name:		freexl
-Version:	1.0.0e
+Version:	1.0.0f
 Release:	1
 License:	MPL v1.1 or GPL v2+ or LGPL v2.1+
 Group:		Libraries
 Source0:	http://www.gaia-gis.it/gaia-sins/freexl-sources/%{name}-%{version}.tar.gz
-# Source0-md5:	9b494d42a079e63afbb9dc0915e8fb56
+# Source0-md5:	1c9df7402ac2d70d38c8853c12dc702d
 URL:		https://www.gaia-gis.it/fossil/freexl
 %{?with_apidocs:BuildRequires:	doxygen >= 1.7.3}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
