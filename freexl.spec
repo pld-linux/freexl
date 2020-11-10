@@ -5,14 +5,15 @@
 Summary:	Simple library for extracting the contents of Microsoft Excel files
 Summary(pl.UTF-8):	Prosta biblioteka do wyciągania danych z plików Microsoft Excela
 Name:		freexl
-Version:	1.0.5
+Version:	1.0.6
 Release:	1
 License:	MPL v1.1 or GPL v2+ or LGPL v2.1+
 Group:		Libraries
 Source0:	http://www.gaia-gis.it/gaia-sins/freexl-sources/%{name}-%{version}.tar.gz
-# Source0-md5:	3ed2a0486f03318820b25f0ccae5e14d
-URL:		https://www.gaia-gis.it/fossil/freexl
+# Source0-md5:	d3d2df0d2ad7713038ce99024738172a
+URL:		https://www.gaia-gis.it/fossil/freexl/index
 %{?with_apidocs:BuildRequires:	doxygen >= 1.7.3}
+BuildRequires:	rpmbuild(macros) >= 1.752
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -57,9 +58,7 @@ Statyczna biblioteka FreeXL.
 Summary:	FreeXL API documentation
 Summary(pl.UTF-8):	Dokumentacja API biblioteki FreeXL
 Group:		Documentation
-%if "%{_rpmversion}" >= "5"
-BuildArch:	noarch
-%endif
+%{?noarchpackage}
 
 %description apidocs
 API and internal documentation for FreeXL library.
@@ -111,5 +110,5 @@ rm -rf $RPM_BUILD_ROOT
 %if %{with apidocs}
 %files apidocs
 %defattr(644,root,root,755)
-%doc html/*
+%doc html/{search,*.{css,html,jpg,js,png}}
 %endif
