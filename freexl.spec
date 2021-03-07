@@ -58,7 +58,7 @@ Statyczna biblioteka FreeXL.
 Summary:	FreeXL API documentation
 Summary(pl.UTF-8):	Dokumentacja API biblioteki FreeXL
 Group:		Documentation
-%{?noarchpackage}
+BuildArch:	noarch
 
 %description apidocs
 API and internal documentation for FreeXL library.
