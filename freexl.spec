@@ -97,12 +97,12 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS README
-%attr(755,root,root) %{_libdir}/libfreexl.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libfreexl.so.1
+%{_libdir}/libfreexl.so.*.*.*
+%ghost %{_libdir}/libfreexl.so.1
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libfreexl.so
+%{_libdir}/libfreexl.so
 %{_includedir}/freexl.h
 %{_pkgconfigdir}/freexl.pc
 
