@@ -1,6 +1,6 @@
 #
 # Conditional build:
-%bcond_without	apidocs		# do not build and package API docs
+%bcond_without	apidocs		# doxygen based API documentation
 
 Summary:	Simple library for extracting the contents of Microsoft Excel files
 Summary(pl.UTF-8):	Prosta biblioteka do wyciągania danych z plików Microsoft Excela
@@ -13,6 +13,9 @@ Source0:	http://www.gaia-gis.it/gaia-sins/freexl-sources/%{name}-%{version}.tar.
 # Source0-md5:	cc3711ef54fd2dabea1eafa1a6e5af56
 URL:		https://www.gaia-gis.it/fossil/freexl/index
 %{?with_apidocs:BuildRequires:	doxygen >= 1.7.3}
+BuildRequires:	expat-devel >= 1.95
+BuildRequires:	minizip-devel
+BuildRequires:	rpm-build >= 4.6
 BuildRequires:	rpmbuild(macros) >= 1.752
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
